@@ -1,0 +1,247 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Contratos.MAUI.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25"
+            VerticalOptions="Center">
+            <Grid ColumnDefinitions="Auto,*" RowDefinitions="Auto, Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto">
+
+                <Button
+                    Grid.Row="0"
+                    Clicked="PickFileClickedContract"
+                    HorizontalOptions="Center"
+                    Text="Pick a Contract" />
+                <Label
+                    x:Name="FilePathContract"
+                    FontSize="15"
+                    HorizontalTextAlignment="Center"
+                    IsVisible="false" />
+                <Label
+                    x:Name="FileNameContract"
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    FontSize="15"
+                    HorizontalTextAlignment="Center" />
+                <Button
+                    Grid.Row="1"
+                    Clicked="PickFileClickedLetter"
+                    HorizontalOptions="Center"
+                    Text="Pick a Letter" />
+                <Label
+                    x:Name="FilePathLetter"
+                    FontSize="15"
+                    HorizontalTextAlignment="Center"
+                    IsVisible="false" />
+                <Label
+                    x:Name="FileNameLetter"
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    FontSize="15"
+                    HorizontalTextAlignment="Center" />
+                <Label
+                    Grid.Row="2"
+                    FontSize="18"
+                    HorizontalOptions="Center"
+                    SemanticProperties.HeadingLevel="Level1"
+                    Text="Inquilino" />
+                <Label
+                    x:Name="ResultLabel"
+                    Grid.Row="2"
+                    Grid.Column="1"
+                    FontSize="15"
+                    HorizontalTextAlignment="Center" />
+                <Label
+                    Grid.Row="3"
+                    FontSize="18"
+                    SemanticProperties.HeadingLevel="Level1"
+                    Text="Contrato#"
+                    VerticalTextAlignment="Center" />
+                <Entry
+                    x:Name="idContrato"
+                    Grid.Row="3"
+                    Grid.Column="1" />
+                <Label
+                    Grid.Row="4"
+                    FontSize="18"
+                    Text="flat"
+                    VerticalTextAlignment="Center" />
+                <Entry
+                    x:Name="flat"
+                    Grid.Row="4"
+                    Grid.Column="1" />
+                <Label
+                    Grid.Row="5"
+                    FontSize="18"
+                    Text="complex"
+                    VerticalTextAlignment="Center" />
+                <Entry
+                    x:Name="complex"
+                    Grid.Row="5"
+                    Grid.Column="1" />
+                <Label
+                    Grid.Row="6"
+                    FontSize="18"
+                    Text="utility"
+                    VerticalTextAlignment="Center" />
+                <Entry
+                    x:Name="utility"
+                    Grid.Row="6"
+                    Grid.Column="1" />
+                <Label
+                    Grid.Row="7"
+                    FontSize="18"
+                    Text="garage"
+                    VerticalTextAlignment="Center" />
+                <Entry
+                    x:Name="garage"
+                    Grid.Row="7"
+                    Grid.Column="1" />
+                <Label
+                    Grid.Row="8"
+                    FontSize="18"
+                    Text="address"
+                    VerticalTextAlignment="Center" />
+                <Entry
+                    x:Name="address"
+                    Grid.Row="8"
+                    Grid.Column="1" />
+                <Label
+                    Grid.Row="9"
+                    FontSize="18"
+                    Text="price"
+                    VerticalTextAlignment="Center" />
+                <Entry
+                    x:Name="price"
+                    Grid.Row="9"
+                    Grid.Column="1" />
+                <Label
+                    Grid.Row="10"
+                    FontSize="18"
+                    Text="insurance"
+                    VerticalTextAlignment="Center" />
+                <Entry
+                    x:Name="insurance"
+                    Grid.Row="10"
+                    Grid.Column="1" />
+                <Label
+                    Grid.Row="11"
+                    FontSize="18"
+                    Text="duration"
+                    VerticalTextAlignment="Center" />
+                <Entry
+                    x:Name="duration"
+                    Grid.Row="11"
+                    Grid.Column="1" />
+                <Label
+                    Grid.Row="12"
+                    FontSize="18"
+                    Text="startDate"
+                    VerticalTextAlignment="Center" />
+                <DatePicker
+                    x:Name="startDate"
+                    Grid.Row="12"
+                    Grid.Column="1"
+                    Format="dd-MM-yyyy"
+                    MinimumDate="01/01/2022" />
+                <Label
+                    Grid.Row="13"
+                    FontSize="18"
+                    Text="endDate"
+                    VerticalTextAlignment="Center" />
+                <DatePicker
+                    x:Name="endDate"
+                    Grid.Row="13"
+                    Grid.Column="1"
+                    Format="dd-MM-yyyy"
+                    MinimumDate="01/01/2022" />
+                <Label
+                    Grid.Row="14"
+                    FontSize="18"
+                    Text="tenantName"
+                    VerticalTextAlignment="Center" />
+                <Entry
+                    x:Name="tenantName"
+                    Grid.Row="14"
+                    Grid.Column="1" />
+                <Label
+                    Grid.Row="15"
+                    FontSize="18"
+                    Text="tenantId"
+                    VerticalTextAlignment="Center" />
+                <Entry
+                    x:Name="tenantId"
+                    Grid.Row="15"
+                    Grid.Column="1" />
+                <Label
+                    Grid.Row="16"
+                    FontSize="18"
+                    Text="tenantPhone"
+                    VerticalTextAlignment="Center" />
+                <Entry
+                    x:Name="tenantPhone"
+                    Grid.Row="16"
+                    Grid.Column="1" />
+                <Label
+                    Grid.Row="17"
+                    FontSize="18"
+                    Text="tenantEmail"
+                    VerticalTextAlignment="Center" />
+                <Entry
+                    x:Name="tenantEmail"
+                    Grid.Row="17"
+                    Grid.Column="1" />
+                <Label
+                    Grid.Row="18"
+                    FontSize="18"
+                    Text="codeptorName"
+                    VerticalTextAlignment="Center" />
+                <Entry
+                    x:Name="codeptorName"
+                    Grid.Row="18"
+                    Grid.Column="1" />
+                <Label
+                    Grid.Row="19"
+                    FontSize="18"
+                    Text="codeptorId"
+                    VerticalTextAlignment="Center" />
+                <Entry
+                    x:Name="codeptorId"
+                    Grid.Row="19"
+                    Grid.Column="1" />
+                <Label
+                    Grid.Row="20"
+                    FontSize="18"
+                    Text="codeptorPhone"
+                    VerticalTextAlignment="Center" />
+                <Entry
+                    x:Name="codeptorPhone"
+                    Grid.Row="20"
+                    Grid.Column="1" />
+                <Label
+                    Grid.Row="21"
+                    FontSize="18"
+                    Text="codeptorEmail"
+                    VerticalTextAlignment="Center" />
+                <Entry
+                    x:Name="codeptorEmail"
+                    Grid.Row="21"
+                    Grid.Column="1" />
+                <Button
+                    x:Name="submitBtn"
+                    Grid.Row="22"
+                    Grid.ColumnSpan="2"
+                    Clicked="OnSubmitClicked"
+                    HorizontalOptions="Center"
+                    SemanticProperties.Hint="Submit the data"
+                    Text="Estructurar" />
+
+            </Grid>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

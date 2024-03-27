@@ -1,0 +1,31 @@
+﻿
+using Microsoft.Maui.Storage;
+
+private async void SaveFile_Clicked(object sender, EventArgs e) {
+    CancellationTokenSource cancellationTokenSource = new CancellationTokenSource();
+    CancellationToken cancellationToken = cancellationTokenSource.Token;
+
+    try {
+        await SaveFile(cancellationToken);
+    } catch (OperationCanceledException) {
+        throw new OperationCanceledException("It was cancelled");
+    }
+}
+private async void PickFolder_Clicked(object sender, EventArgs e) {
+    CancellationTokenSource cancellationTokenSource = new CancellationTokenSource();
+    CancellationToken cancellationToken = cancellationTokenSource.Token;
+    try {
+        await PickFolder(cancellationToken);
+    } catch (OperationCanceledException) {
+        throw new OperationCanceledException("It was cancelled");
+    }
+}
+private async void PickPhoto_Clicked(object sender, EventArgs e) {
+    FileResult result = await FilePicker.PickAsync(new PickOptions {
+        PickerTitle = "Pick a Photo",
+        FileTypes = FilePickerFileType.Images
+    });
+    if (result == null) return;
+
+    FileName.Text = result.FileName;
+}
